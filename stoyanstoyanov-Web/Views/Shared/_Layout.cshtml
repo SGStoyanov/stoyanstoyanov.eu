@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>stoyanstoyanov.eu - @ViewBag.Title</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div id="sidebar">
+        <img src="~/img/stoyan-small.jpg" alt="stoyan-picture" class="headshot" />
+        <span id="username">Stoyan Stoyanov</span>
+        <ul class="menu">
+            <li class="active"><a asp-controller="App" asp-action="Index">Home</a></li>
+            <li><a asp-controller="App" asp-action="About">About</a></li>
+            <li><a asp-controller="App" asp-action="Contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <div id="wrapper">
+        <div id="main">
+            <div>
+                <button id="sidebarToggle">Toggle Menu</button>
+            </div>
+            <div>
+                @RenderBody()
+            </div>
+        </div>
+
+        <footer>
+            <span>&copy; Stoyan Stoyanov 2016</span>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="~/lib/jQuery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="~/scripts/site.js"></script>
+
+    @RenderSection("Scripts", false)
+
+</body>
+</html>

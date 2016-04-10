@@ -1,0 +1,35 @@
+﻿@model stoyanstoyanov_Web.ViewModels.ContactViewModel
+@{
+    ViewBag.Title = "Contact Page";
+}
+@section Scripts {
+    <script type="text/javascript" src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script type="text/javascript" src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+}
+<h2>Contact</h2>
+<form method="post">
+    <div asp-validation-summary="ValidationSummary.ModelOnly"></div>
+
+    <label asp-for="Name">Name</label>
+    <input asp-for="Name"/>
+    <span asp-validation-for="Name"></span>
+
+    <label asp-for="Email">Email</label>
+    <input type="email" asp-for="Email"/>
+    <span asp-validation-for="Email"></span>
+
+    <label asp-for="Message">Text</label>
+    <textarea cols="50" rows="8" asp-for="Message"></textarea>
+    <span asp-validation-for="Message"></span>
+
+    <div>
+        <input type="submit" value="Send Message"/>
+    </div>
+
+    @if (ViewBag.Message != null)
+    {
+        <div>
+            <span>@ViewBag.Message</span>
+        </div>
+    }
+</form>

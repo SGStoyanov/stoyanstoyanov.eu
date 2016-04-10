@@ -1,0 +1,97 @@
+﻿html, body {
+    font-family: sans-serif;
+    font-size: 14px;
+    margin: 0;
+}
+
+#sidebar {
+    background: #2e8b57;
+    color: #eee;
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    overflow: hidden;
+    left: 0;
+    margin: 0;
+    -webkit-transition: left ease 0.25s;
+    -moz-transition: left ease 0.25s;
+    -ms-transition: left ease 0.25s;
+    -o-transition: left ease 0.25s;
+    transition: left ease 0.25s;
+}
+
+.headshot {
+        max-width: 50px;
+        border: 1px solid black;
+        padding: 4px;
+    }
+
+    #sidebar .menu{
+        font-size: 12px;
+    }
+        #sidebar .menu>li {
+            list-style-type: none;
+        }
+
+        li.active {
+            font-weight: bold;
+        }
+
+        #sidebar a {
+            color: #eee;
+        }
+
+    #sidebar.hide-sidebar {
+        left: -250px;
+        -webkit-transition: left ease .25s;
+        -moz-transition: left ease .25s;
+        -ms-transition: left ease .25s;
+        -o-transition: left ease .25s;
+        transition: left ease .25s;
+    }
+
+label {
+    font-weight: bold;
+    display: block;
+}
+
+input[type=text], input[type=text], input[type=email] {
+    width: 160px;
+}
+
+    input[type=submit] {
+        width: auto;
+    }
+
+#wrapper {
+    margin: 0 0 0 250px;
+    -webkit-transition: margin-left ease 0.25s;
+    -moz-transition: margin-left ease 0.25s;
+    -ms-transition: margin-left ease 0.25s;
+    -o-transition: margin-left ease 0.25s;
+    transition: margin-left ease 0.25s;
+}
+
+#main {
+        background-color: #eee;
+        padding: 4px;
+        margin: 0;
+    }
+
+    #wrapper.hide-sidebar {
+        margin-left: 0;
+        -webkit-transition: margin-left ease .25s;
+        -moz-transition: margin-left ease .25s;
+        -ms-transition: margin-left ease .25s;
+        -o-transition: margin-left ease .25s;
+        transition: margin-left ease .25s;
+    }
+
+footer {
+    color: #eee;
+    background-color: #2e8b57;
+    padding: 8px 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
